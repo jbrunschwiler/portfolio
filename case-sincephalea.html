@@ -1,0 +1,254 @@
+<!-- DEBUG DELETE TEST -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sinCephalea Redesign | Case Study by Jasmin Brunschwiler</title>
+    <meta name="description" content="Turning a heavy migraine tracker into an insight-driven therapeutic tool.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sincephaleastyles.css">
+</head>
+<body class="case-page">
+    <!-- CODEX_APPLIED_TEST -->
+    <header class="site-header">
+        <div class="case-container header-inner">
+            <div class="brand">Jasmin Brunschwiler</div>
+            <nav class="header-nav" aria-label="Primary">
+                <a href="#" class="nav-link">Work</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-section hero-section fade-in">
+            <div class="case-container hero-grid">
+                <div class="hero-content">
+                    <h1 class="page-title">sinCephalea Redesign</h1>
+
+                    <div class="meta-inline">
+                        <div class="meta-item">
+                            <span class="meta-label">Year</span>
+                            <span class="meta-value">2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Tools</span>
+                            <span class="meta-value">Figma</span>
+                        </div>
+                        <details class="meta-details">
+                            <summary>Project details</summary>
+                            <div class="chip-row" aria-label="Responsibilities">
+                                <span class="chip">UX research</span>
+                                <span class="chip">UX problem analysis</span>
+                                <span class="chip">Competitor benchmark</span>
+                                <span class="chip">Diary study</span>
+                                <span class="chip">Redesign</span>
+                                <span class="chip">Design system</span>
+                            </div>
+                        </details>
+                    </div>
+
+                    <p class="section-subtitle">Turning a heavy migraine tracker into an insight-driven therapeutic tool</p>
+                    <p class="section-text">
+                        sinCephalea is a prescription-grade digital health app for migraine patients that combines CGM sensor data, nutrition logging and migraine journaling. In this self-initiated UX project, I took an end-to-end look at the product and redesigned the core experience: from “just tracking” to explaining patterns between migraine, glucose and daily behaviour.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section fade-in">
+            <div class="case-container">
+                <div class="case-grid-3">
+                    <article class="case-card">
+                        <h2 class="section-title">The problem</h2>
+                        <p class="section-text">Patients log every meal and migraine episode for weeks, but mainly see raw charts and dense, bright screens. The effort–to–insight ratio is poor, and the UI is hard to use during attacks.</p>
+                    </article>
+                    <article class="case-card">
+                        <h2 class="section-title">What I did</h2>
+                        <p class="section-text">I ran a diary study, heuristic evaluation and competitive benchmark, then reframed the focus from data entry to insight delivery. I designed a migraine-friendly dark UI, quick episode and medication flows with follow-ups on effectiveness, and an explainable insight layer that turns patterns into short, empathetic messages.</p>
+                    </article>
+                    <article class="case-card">
+                        <h2 class="section-title">Why it matters</h2>
+                        <p class="section-text">The concept increases perceived value (“What does this mean for my migraine?”), creates richer longitudinal data for patients and clinicians, and fits the real context of use: pain, light sensitivity and high tracking burden.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1) INSIGHTS -->
+        <section class="case-section fade-in insights-section">
+            <!-- Text content (no band) -->
+            <div class="case-container">
+                <div class="insights-header-block">
+                    <h2>1. Insightful, explainable patterns instead of raw data</h2>
+                    <p class="insights-intro">
+                        I designed a dedicated insights view that combines CGM data, meals and migraine episodes, and uses an AI-supported layer to turn them into clear, explainable patterns instead of raw charts.
+                    </p>
+                    <ul class="insights-list">
+                        <li>Narrative summaries such as “4 of 6 recent attacks followed a steep glucose rise within 2–4 hours”</li>
+                        <li>“Why am I seeing this?” explanations that link each hint to concrete data points</li>
+                        <li>Configurable frequency of insights and a calm, non-judgmental tone of voice</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Band behind images -->
+            <div class="case-image-band">
+                <div class="case-container">
+                    <div class="insights-grid">
+                        <figure class="case-figure insights-figure">
+                            <figcaption class="figure-caption">Old design</figcaption>
+                            <img src="images/oldhome.png" alt="Old design interface with dense data presentation" class="case-image phone-shot" loading="lazy">
+                        </figure>
+
+                        <figure class="case-figure insights-figure">
+                            <figcaption class="figure-caption">Redesign</figcaption>
+                            <img src="images/newhome.png" alt="Redesigned insight interface showing calm layout" class="case-image phone-shot" loading="lazy">
+                        </figure>
+
+                        <figure class="case-figure insights-figure">
+                            <figcaption class="figure-caption">Clear patterns, not raw data</figcaption>
+                            <img src="images/nudging1.png" alt="Insight cards translating data into narratives" class="case-image phone-shot" loading="lazy">
+                        </figure>
+
+                        <!-- s3 screenshot intentionally removed -->
+                    </div>
+
+                    
+                   <!-- Calendar (separate images, no card frame) - Pattern A -->
+                    <div class="calendar-block">
+                        <div class="img-row-wrap">
+                            <div class="img-row" data-pattern="a">
+                                <div class="img-group">
+                                    <figure class="case-figure">
+                                        <figcaption class="figure-caption">Old design</figcaption>
+                                        <img src="images/oldcalender1.png" alt="Old calendar view screen 1" class="case-image phone-shot" loading="lazy">
+                                    </figure>
+                                    <figure class="case-figure">
+                                        <figcaption class="figure-caption">Old design</figcaption>
+                                        <img src="images/oldcalender2.png" alt="Old calendar view screen 2" class="case-image phone-shot" loading="lazy">
+                                    </figure>
+                                </div>
+                                <div class="img-group">
+                                    <figure class="case-figure">
+                                        <figcaption class="figure-caption">New design</figcaption>
+                                        <img src="images/calendernew1.png" alt="New calendar view screen 1" class="case-image phone-shot" loading="lazy">
+                                    </figure>
+                                    <figure class="case-figure">
+                                        <figcaption class="figure-caption">New design</figcaption>
+                                        <img src="images/calendernew2.png" alt="New calendar view screen 2" class="case-image phone-shot" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="calendar-caption">
+                            Calendar overview surfaces recurring patterns across weeks, e.g. clustering of attacks with unstable glucose days.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2) LOG FAST -->
+        <section class="case-section fade-in">
+            <div class="case-container">
+                <div class="text-block">
+                    <h2 class="section-title">2. Log fast in pain, add detail later</h2>
+                    <p class="section-text">I redesigned the migraine flow so patients can log an episode with one tap during pain and fill in details, medication and effectiveness later.</p>
+                </div>
+                
+            </div>
+
+</section><!-- Band behind section 2 images -->
+            <div class="case-image-band">
+                <div class="case-container">
+                    <!-- Pattern B: Solo + subgroup -->
+                    <div class="img-row-wrap">
+                        <div class="img-row" data-pattern="b">
+                            <figure class="case-figure">
+                                <figcaption class="figure-caption">Quick migraine entry</figcaption>
+                                <img src="images/migrainetrack.png" alt="Quick migraine entry screen" class="case-image phone-shot" loading="lazy">
+                            </figure>
+                            <div class="duo-group">
+                                <figure class="case-figure">
+                                    <figcaption class="figure-caption">Medication follow-up 1</figcaption>
+                                    <img src="images/messanger1.png" alt="Medication follow-up message 1" class="case-image phone-shot" loading="lazy">
+                                </figure>
+                                <figure class="case-figure">
+                                    <figcaption class="figure-caption">Medication follow-up 2</figcaption>
+                                    <img src="images/messanger2.png" alt="Medication follow-up message 2" class="case-image phone-shot" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <!-- 3) MIGRAINE FRIENDLY UI -->
+        <section class="case-section fade-in">
+            <div class="case-container">
+                <div class="text-block">
+                    <h2 class="section-title">3. A migraine-friendly, low-stimulus interface</h2>
+                    <p class="section-text">I created a dark, low-stimulus UI that is actually usable during migraine attacks: calm contrasts, clear hierarchy and reduced motion.</p>
+                    <ul class="bullet-list">
+                        <li>Dark-mode UI with muted accent colours and WCAG-compliant contrast</li>
+                        <li>Larger tap targets and bottom-aligned actions for easier use in pain</li>
+                    </ul>
+                    <p class="section-subtitle">Log Migraine Episode</p>
+                </div>
+            </div>
+
+            <!-- Band behind section 3 wide image -->
+            <div class="case-image-band">
+                <div class="case-container">
+                    <div class="flow-block">
+  <h3 class="flow-title">Full migraine episode flow across all steps</h3>
+
+  <!-- Pattern C: Uniform spacing -->
+  <div class="img-row-wrap">
+    <div class="img-row" data-pattern="c">
+      <img src="images/flow1.png" alt="Migraine flow step 1" loading="lazy">
+      <img src="images/flow2.png" alt="Migraine flow step 2" loading="lazy">
+      <img src="images/flow3.png" alt="Migraine flow step 3" loading="lazy">
+      <img src="images/flow4.png" alt="Migraine flow step 4" loading="lazy">
+      <img src="images/flow5.png" alt="Migraine flow step 5" loading="lazy">
+    </div>
+  </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section fade-in">
+            <div class="case-container">
+                <h2 class="section-title">Outcome &amp; learnings</h2>
+                <h3 class="section-subtitle">Expected product impact</h3>
+                <p class="section-text">The redesign shifts sinCephalea from fragmented logging screens to a coherent insight layer, so patients see understandable migraine patterns instead of raw charts.</p>
+                <p class="section-text">Integrated episode, meal and medication flows, plus the calendar and insight views, create richer, more structured longitudinal data that can support more meaningful self-management and doctor–patient conversations.</p>
+                <h3 class="section-subtitle">What this project shows about me</h3>
+                <p class="section-text">I can take a complex, data-heavy health product, spot where effort and value are misaligned, and redesign the experience so that data, AI and UI work together as a calm, explainable companion for people in a vulnerable context.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Gallery -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous image">&#8249;</button>
+        <button class="lightbox-next" aria-label="Next image">&#8250;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="sincephalea.js"></script>
+</body>
+</html>

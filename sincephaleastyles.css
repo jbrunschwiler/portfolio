@@ -1,0 +1,1103 @@
+/* Base theme */
+:root {
+    --bg: #080808;
+    --surface: #101010;
+    --muted-surface: #121212;
+    --text-primary: #f2f2f2;
+    --text-secondary: #c0c0c0;
+    --text-tertiary: #8a8a8a;
+    --border: #222;
+    --accent: #86d7a5;
+
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    --space-7: 96px;
+    --space-8: 128px;
+
+    --page-max-width: 1200px;
+    --page-padding-desktop: 64px;
+    --page-padding-mobile: 16px;
+    --text-max-width: 65ch;
+
+    /* iPhone sizing tokens */
+    --iphone-w: 390px;
+    --iphone-max-h: 680px; /* this is the "oldhome height system" */
+    
+    /* Image row spacing tokens */
+    --gap-group: 12px;      /* small gap inside subgroups */
+    --gap-row: 40px;        /* larger gap between standalone/group blocks */
+    --gap-uniform: 20px;    /* uniform gap for 5-image row */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body.case-page {
+    margin: 0;
+    font-family: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding-bottom: 100px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bricolage Grotesque', 'Manrope', system-ui, sans-serif;
+    color: #f8f8f8;
+    line-height: 1.2;
+    margin: 0 0 0.6em;
+}
+
+p {
+    margin: 0 0 1em;
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
+
+.case-container {
+    width: 100%;
+    max-width: var(--page-max-width);
+    margin: 0 auto;
+    padding: 0 var(--page-padding-mobile);
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 8, 8, 0.95);
+    border-bottom: 1px solid var(--border);
+    z-index: 20;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.nav-link {
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+main {
+    padding-top: var(--space-7);
+}
+
+.case-section {
+    margin-top: var(--space-6);
+}
+
+.hero-section {
+    margin-top: var(--space-4);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+/* Meta */
+.meta-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.meta-inline .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.meta-inline .meta-label {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+
+.meta-inline .meta-value {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.meta-details {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.meta-details summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+}
+
+.meta-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.meta-details summary::after {
+    content: "▾";
+    font-size: 0.8em;
+    color: var(--text-tertiary);
+}
+
+.meta-details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.meta-details .chip-row {
+    margin-top: var(--space-1);
+}
+
+.page-title {
+    font-size: clamp(2.6rem, 4vw, 3.6rem);
+    margin-bottom: 0.3em;
+}
+
+.section-subtitle {
+    font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+    color: #f2f2f2;
+    margin: 0 0 0.6em;
+}
+
+.section-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Chips */
+.chip {
+    padding: var(--space-1) 10px;
+    border-radius: 10px;
+    background: #0d0d0d;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* 3 column problem/what/why */
+.case-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+}
+
+.case-card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.text-block {
+    max-width: var(--text-max-width);
+    display: grid;
+    gap: var(--space-2);
+    padding-bottom: 48px;  /* Consistent spacing before grey band */
+}
+
+/* Remove bottom margin from last element in text-block */
+.text-block > *:last-child {
+    margin-bottom: 0;
+}
+
+.bullet-list {
+    margin: 0 0 var(--space-1);
+    padding-left: var(--space-3);
+    color: var(--text-secondary);
+    display: grid;
+    gap: var(--space-1);
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   Continuous image band
+   ========================= */
+.case-image-band {
+    background: #161616;
+    padding: 96px 0;
+}
+
+@media (max-width: 768px) {
+    .case-image-band {
+        padding: 56px 0;
+    }
+}
+
+/* Square images inside the band only */
+.case-image-band img {
+    border-radius: 0;
+}
+
+/* =========================
+   Figure + image sizing system
+   ========================= */
+.figure-caption {
+    margin: 0 0 8px;
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* =========================
+   Insights section
+   ========================= */
+.insights-section {
+    padding: 60px 0;
+}
+
+.insights-header-block {
+    padding-bottom: 48px;  /* Consistent spacing before grey band */
+    margin-bottom: 0;
+    max-width: 800px;
+}
+
+.insights-header-block h2 {
+    margin-bottom: 24px;
+}
+
+.insights-intro {
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.insights-list {
+    margin-bottom: 0;  /* Remove bottom margin - spacing handled by container padding */
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.insights-list li {
+    margin-bottom: 8px;
+}
+
+.insights-figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insights-figure figcaption {
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    color: #b3b3b3;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.insights-figure:nth-child(3) figcaption {
+    text-transform: none;
+}
+
+
+
+
+/* =========================
+   Section 2 phone row sizing, stop shrinking
+   ========================= */
+.phone-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: center;
+    margin: var(--space-4) 0 var(--space-3);
+}
+
+.phone-row-two {
+    justify-content: center;
+    gap: var(--space-6);
+}
+
+.phone-row-two .phone-figure {
+    flex: 0 0 min(100%, var(--iphone-w));
+    max-width: min(100%, var(--iphone-w));
+}
+
+.phone-figure {
+    margin: 0;
+    text-align: left;
+}
+
+.phone-figure img {
+    max-width: 100%;
+    border: none;
+    background: transparent;
+    margin: 0;
+}
+
+.subhead-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    margin: var(--space-2) 0 var(--space-2);
+}
+
+.subhead {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Wide figure: keep transparent so the band stays continuous */
+.case-figure.wide-figure {
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.case-figure .wide-image {
+    border: none;
+    border-radius: 0;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .case-container {
+        padding: 0 var(--space-4);
+    }
+
+    .case-section {
+        margin-top: var(--space-7);
+    }
+
+    .hero-grid {
+        gap: var(--space-5);
+    }
+
+    .case-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .case-card {
+        padding-right: var(--space-3);
+    }
+
+    .subhead-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-3);
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding-top: var(--space-8);
+    }
+
+    .hero-section {
+        margin-top: var(--space-5);
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .text-block {
+        max-width: 65%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .case-container {
+        padding: 0 var(--page-padding-desktop);
+    }
+}
+
+/* =========================
+   FINAL OVERRIDES — phone layout + alignment
+   ========================= */
+
+.case-figure {
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.case-figure .case-image {
+    width: min(100%, var(--iphone-w));
+    max-height: var(--iphone-max-h);
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.case-figure .case-image[src="images/1.png"] {
+    max-height: none;
+}
+
+/* Direct rules for the three logfast images by src */
+.case-figure .case-image[src="images/migrainetrack.png"],
+.case-figure .case-image[src="images/messanger1.png"],
+.case-figure .case-image[src="images/messanger2.png"],
+img[src="images/migrainetrack.png"],
+img[src="images/messanger1.png"],
+img[src="images/messanger2.png"] {
+    max-height: 680px !important;
+    height: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain !important;
+}
+
+/* Override for logfast images - must be more specific than .case-figure .case-image */
+.case-figure .case-image.logfast-shot,
+.case-figure .logfast-shot,
+.logfast-left .logfast-shot,
+.logfast-right .logfast-pair .logfast-shot {
+    max-height: 680px !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+.calendar-block {
+    margin-top: 64px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+    justify-items: center;
+    align-items: start;
+}
+
+.calendar-caption {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+.flow-block {
+    margin-top: 24px;
+}
+
+.flow-title {
+    margin: 0 0 20px;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    text-align: center;
+    font-weight: 600;
+}
+
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 32px;
+    justify-items: center;
+    align-items: start;
+}
+
+.phone-row,
+.phone-row-two {
+    align-items: flex-start;
+}
+
+.flow-row {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-start;
+    justify-content: center;  /* Center images */
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    scroll-snap-type: x mandatory;
+}
+
+.flow-step {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.flow-row::-webkit-scrollbar {
+    height: 6px;
+}
+
+.flow-row::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 3px;
+}
+
+.phone-row-three {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+}
+
+.phone-row-three .phone-figure {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .insights-grid {
+        gap: 20px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .flow-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .flow-row {
+        justify-content: flex-start;
+        padding-left: var(--space-2);
+        padding-right: var(--space-2);
+    }
+
+    .phone-row-three {
+        justify-content: flex-start;
+        padding-left: var(--space-2);
+        padding-right: var(--space-2);
+    }
+}
+
+@media (max-width: 767px) {
+    .insights-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .flow-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+/* Log fast: left phone + right paired phones */
+.logfast-layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  justify-items: center;  /* Center grid items */
+  align-items: start;           /* top align */
+  width: 100%;
+}
+
+.logfast-left,
+.logfast-right {
+  min-width: 0;                 /* Allow grid items to shrink */
+  width: 100%;
+}
+
+.logfast-pair{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 350px;                    /* padding between the pair */
+  align-items: start;           /* top align */
+  width: 100%;
+  min-width: 0;                 /* Allow grid items to shrink below content size */
+}
+
+/* newhome.png: 15% smaller than standard iPhone width */
+img[src="images/newhome.png"] {
+  width: calc(var(--iphone-w) * 0.85) !important;  /* 390px * 0.85 = 331.5px */
+  max-width: calc(var(--iphone-w) * 0.85) !important;
+  max-height: none !important;  /* Remove max-height limit */
+  object-fit: contain !important;
+}
+
+/* ONLY these 3 images: force same max-height as oldhome.png (680px) */
+.logfast-shot{
+  max-height: 680px !important;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 767px){
+  .logfast-layout{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .logfast-pair{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+/* =========================
+   Reusable Image Row Layout System
+   ========================= */
+.img-row-wrap {
+    padding: 0;
+    width: 100%;
+    overflow-x: visible;  /* Allow horizontal scroll if needed */
+    display: flex;
+    justify-content: center;  /* Center the row */
+}
+
+/* Reduce container padding for image rows to give more space */
+.case-image-band .case-container {
+    max-width: 1600px;  /* Much wider for image rows to fit all images */
+    padding-left: 24px;  /* Reduced padding for more space */
+    padding-right: 24px;  /* Reduced padding for more space */
+}
+
+@media (min-width: 1024px) {
+    .case-image-band .case-container {
+        max-width: 1800px;  /* Even wider on large screens */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .case-image-band .case-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-image-band .case-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.img-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;  /* Prevent wrapping on desktop */
+    justify-content: center;  /* Center images */
+    align-items: flex-start;
+    width: 100%;
+    min-width: min-content;  /* Allow row to shrink to content */
+}
+
+.img-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;  /* Prevent wrapping on desktop */
+    align-items: flex-start;
+    flex-shrink: 0;     /* Prevent groups from shrinking */
+    min-width: min-content;  /* Allow group to shrink to content */
+}
+
+/* Image sizing - scoped to img-row-wrap to avoid conflicts with global img rule */
+:root {
+    --img-max-h: 680px; /* Default max-height */
+}
+
+/* Desktop: slightly smaller images so Pattern B fits in one row */
+@media (min-width: 1024px) {
+    :root {
+        --img-max-h: 680px;
+    }
+}
+
+.img-row-wrap img {
+    max-height: var(--img-max-h) !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    border-radius: 0 !important; /* Override global border-radius */
+    flex-shrink: 0;              /* Prevent images from shrinking */
+}
+  
+/* Pattern A: Two subgroups with --gap-row between, --gap-group inside */
+.img-row-wrap .img-row[data-pattern="a"] {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--gap-row);
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.img-row-wrap .img-row[data-pattern="a"] .img-group {
+    display: flex;
+    gap: var(--gap-group);
+    align-items: flex-start;
+}
+
+/* Pattern A: Target figure elements inside img-group */
+.img-row-wrap .img-row[data-pattern="a"] .img-group .case-figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-row-wrap .img-row[data-pattern="a"] .img-group .case-figure img {
+    width: auto;
+    height: auto;
+    max-height: var(--img-max-h);
+    object-fit: contain;
+}
+
+.img-row-wrap .img-row[data-pattern="a"] .img-group .figure-caption {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* Pattern B: migrainetrack + duo-group (messanger1, messanger2) */
+.img-row-wrap .img-row[data-pattern="b"] {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;  /* Gap between tracker and duo-group */
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* Pattern B: Target direct children (figure and duo-group) */
+.img-row-wrap .img-row[data-pattern="b"] > figure,
+.img-row-wrap .img-row[data-pattern="b"] > .duo-group {
+    margin: 0;
+    padding: 0;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+/* Duo-group: messanger1 and messanger2 side by side */
+.duo-group {
+    display: flex;
+    gap: 26px;  /* Exactly 26px between the two messanger images */
+    align-items: flex-start;
+}
+
+.duo-group .case-figure {
+    margin: 0;
+    padding: 0;
+}
+
+.img-row-wrap .img-row[data-pattern="b"] .case-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-row-wrap .img-row[data-pattern="b"] .case-figure img {
+    width: auto;
+    height: auto;
+    max-height: var(--img-max-h);
+    object-fit: contain;
+}
+
+.img-row-wrap .img-row[data-pattern="b"] .figure-caption {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* Pattern C: Flow images (flow1-5.png) - 5 images in horizontal row */
+.img-row-wrap .img-row[data-pattern="c"] {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5%;
+    width: 100%;
+    flex-wrap: nowrap !important;
+    box-sizing: border-box;
+}
+
+/* Flow images: 18% width each (5 x 18% = 90%, leaves 10% for gaps) */
+.img-row-wrap .img-row[data-pattern="c"] > img {
+    width: 18% !important;
+    max-width: 18% !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 4px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+/* Responsive behavior */
+@media (max-width: 767px) {
+    .img-row,
+    .img-group {
+        flex-wrap: wrap;
+    }
+    
+    .img-row-wrap .img-row[data-pattern="a"],
+    .img-row-wrap .img-row[data-pattern="b"],
+    .img-row-wrap .img-row[data-pattern="c"] {
+        flex-direction: column;
+    }
+    
+    .img-row-wrap .img-row[data-pattern="a"] .img-group,
+    .img-row-wrap .img-row[data-pattern="b"] .img-group {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   Lightbox Gallery
+   ========================= */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox[aria-hidden="false"] {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+
+#lightbox-image {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+  margin-top: 20px;
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 1rem;
+  max-width: 80vw;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Make images clickable */
+.case-image {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.case-image:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .lightbox-prev {
+    left: 10px;
+  }
+  
+  .lightbox-next {
+    right: 10px;
+  }
+  
+  .lightbox-close {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+  }
+  
+  .lightbox-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+  
+  #lightbox-image {
+    max-height: 80vh;
+  }
+}
+
+
+/* Ensure messenger images in pair also get 680px max-height */
+.logfast-pair .logfast-shot,
+.logfast-right .logfast-pair .logfast-shot {
+  max-height: 680px !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Ensure grid columns can expand to fit content */
+.logfast-pair > * {
+  min-width: 0;
+  overflow: visible;
+}
+
+/* Force the three logfast images to have explicit height calculation */
+.case-image[src="images/migrainetrack.png"].logfast-shot,
+.case-image[src="images/messanger1.png"].logfast-shot,
+.case-image[src="images/messanger2.png"].logfast-shot {
+    max-height: 680px !important;
+    height: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    display: block !important;
+}
